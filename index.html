@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Міністерство Води України</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==============================
+     ШАПКА
+     ============================== -->
+<header class="header">
+    <div class="header-inner">
+        <span class="gerb">💧</span>
+        <div class="header-text">
+            <p class="header-small">УКРАЇНА</p>
+            <h1 class="header-title">МІНІСТЕРСТВО ВОДИ</h1>
+            <p class="header-small">Офіційний портал · Засновано у 1488 році</p>
+        </div>
+        <span class="gerb">💧</span>
+    </div>
+</header>
+
+<!-- ==============================
+     НАВІГАЦІЯ
+     ============================== -->
+<nav class="nav">
+    <a href="index.html">Головна</a>
+    <a href="pages/zayavlennya.html">Подати заяву</a>
+    <a href="pages/schetchik.html">Лічильник води</a>
+    <a href="pages/novyny.html">Новини</a>
+    <a href="pages/garyacha.html">Гаряча лінія</a>
+    <a href="pages/karta.html">Карта калюж</a>
+    <a href="pages/reyting.html">Рейтинг громадян</a>
+</nav>
+
+<!-- ==============================
+     ОСНОВНИЙ КОНТЕНТ
+     ============================== -->
+<main>
+
+    <!-- ГОЛОВНИЙ БАНЕР -->
+    <section class="hero">
+        <p class="hero-stamp">● ОФІЦІЙНИЙ ПОРТАЛ — ПРАЦЮЄ</p>
+        <h2>Вода — це привілей,<br>а не право</h2>
+        <p class="hero-sub">
+            Шановний громадянин. Нагадуємо що споживання води
+            без відповідного дозволу є адміністративним
+            правопорушенням згідно Наказу №00-ВД/2031
+            від 30 лютого.
+        </p>
+        <a href="pages/zayavlennya.html" class="btn-main">
+            Отримати дозвіл на воду →
+        </a>
+    </section>
+
+    <!-- СТАТИСТИКА -->
+    <section class="stats">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-num" id="zayavleniy">1 284 847</span>
+                <span class="stat-label">заяв на розгляді</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">80-90</span>
+                <span class="stat-label">років термін розгляду</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num" id="narushiteley">3</span>
+                <span class="stat-label">порушника виявлено сьогодні</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">671 488</span>
+                <span class="stat-label">схвалених заяв за весь час</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- НОВИНИ -->
+    <section class="news-preview">
+        <h3 class="section-title">Останні новини</h3>
+        <div class="news-list">
+
+            <div class="news-item">
+                <span class="news-date">18.03.2026</span>
+                <a href="pages/novyny.html" class="news-link">
+                    Роса офіційно визнана «сірою зоною» — громадянам рекомендовано не дивитись на траву вранці
+                </a>
+            </div>
+
+            <div class="news-item">
+                <span class="news-date">15.03.2026</span>
+                <a href="pages/novyny.html" class="news-link">
+                    Громадянин Петренко В.І. затриманий при вживанні води без повідомлення відомства
+                </a>
+            </div>
+
+            <div class="news-item">
+                <span class="news-date">11.03.2026</span>
+                <a href="pages/novyny.html" class="news-link">
+                    Хмари переведені на технічний облік до особливого розпорядження
+                </a>
+            </div>
+
+            <div class="news-item">
+                <span class="news-date">01.03.2026</span>
+                <a href="pages/novyny.html" class="news-link">
+                    Міністр води виступив із заявою: «Мокре — не означає водне»
+                </a>
+            </div>
+
+        </div>
+        <a href="pages/novyny.html" class="link-more">Всі новини →</a>
+    </section>
+
+</main>
+
+<!-- ==============================
+     ПОПЕРЕДЖЕННЯ
+     ============================== -->
+<div class="warning">
+    ⚠️ УВАГА: Цей сайт використовує куки для відстеження
+    вашого споживання води. Продовжуючи використання сайту
+    ви погоджуєтесь передавати дані про спрагу у федеральну базу.
+</div>
+
+<!-- ==============================
+     ПІДВАЛ
+     ============================== -->
+<footer class="footer">
+    <p>© 1488–2026 Міністерство Води України</p>
+    <p>Всі права на воду захищені. Несанкціоноване зволоження переслідується законом.</p>
+    <!-- якщо ти читаєш це — ти вже під наглядом. pages/secret.html -->
+</footer>
+
+<!-- ==============================
+     ПОПАП ПРИ ЗАВАНТАЖЕННІ
+     ============================== -->
+<div id="popup" class="popup">
+    <div class="popup-inner">
+        <p class="popup-title">⚠️ УВАГА</p>
+        <p>Ваш IP-адрес зафіксовано.</p>
+        <p>Вкажіть кількість склянок води випитих сьогодні для продовження роботи з порталом.</p>
+        <input type="number" id="water-input" placeholder="кількість склянок" min="0">
+        <button id="popup-btn">Підтвердити</button>
+    </div>
+</div>
+
+<!-- JS завжди в кінці body -->
+<script src="script.js"></script>
+
+</body>
+</html>

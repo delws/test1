@@ -1,0 +1,1329 @@
+/* ==============================
+   ЗМІННІ — кольори і шрифти
+   Міняй тут — зміниться скрізь
+   ============================== */
+:root {
+    --color-bg: #1a1a2e;
+    --color-bg-dark: #16213e;
+    --color-text: #e0e0e0;
+    --color-text-muted: #888;
+    --color-accent: #4fc3f7;
+    --color-danger: #ff5252;
+    --color-border: #2a2a4a;
+    --font-main: 'Courier New', monospace;
+}
+
+/* ==============================
+   СКИДАННЯ — прибираємо все що
+   браузер додає від себе
+   ============================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+/* ==============================
+   ШАПКА
+   ============================== */
+.header {
+    background-color: var(--color-bg-dark);
+    border-bottom: 2px solid var(--color-accent);
+    padding: 20px 40px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-title {
+    font-size: 28px;
+    color: var(--color-accent);
+    letter-spacing: 0.3em;
+}
+
+.header-small {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.2em;
+}
+
+.gerb {
+    font-size: 48px;
+}
+/* ==============================
+   НАВІГАЦІЯ
+   ============================== */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: var(--color-bg-dark);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav a {
+    padding: 14px 18px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    border-right: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+}
+
+.nav a:hover {
+    background: var(--color-accent);
+    color: #000;
+}
+/* ==============================
+   ГОЛОВНИЙ БАНЕР
+   ============================== */
+.hero {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.hero-stamp {
+    display: inline-block;
+    color: var(--color-danger);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    border: 1px solid var(--color-danger);
+    padding: 4px 16px;
+    margin-bottom: 32px;
+    animation: blink 1.5s infinite;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.hero-sub {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.btn-main {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #000;
+    padding: 16px 40px;
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+}
+
+.btn-main:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   АНІМАЦІЯ МИГАННЯ
+   ============================== */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+}
+/* ==============================
+   СТАТИСТИКА
+   ============================== */
+.stats {
+    background: var(--color-bg-dark);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 48px 40px;
+}
+
+.stats-inner {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 42px;
+    color: var(--color-accent);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+    max-width: 150px;
+}
+/* ==============================
+   НОВИНИ
+   ============================== */
+.news-preview {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.section-title {
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.news-item {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+}
+
+.news-item:hover {
+    padding-left: 12px;
+    border-bottom-color: var(--color-accent);
+}
+
+.news-date {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.news-link {
+    font-size: 15px;
+    color: var(--color-text);
+    line-height: 1.5;
+    transition: color 0.2s ease;
+}
+
+.news-link:hover {
+    color: var(--color-accent);
+}
+
+.link-more {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+}
+
+.link-more:hover {
+    letter-spacing: 0.2em;
+}
+
+/* ==============================
+   ПОПЕРЕДЖЕННЯ
+   ============================== */
+.warning {
+    background: #1a0000;
+    border-top: 1px solid var(--color-danger);
+    border-bottom: 1px solid var(--color-danger);
+    color: var(--color-danger);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 16px 40px;
+    text-align: center;
+}
+
+/* ==============================
+   ПІДВАЛ
+   ============================== */
+.footer {
+    background: var(--color-bg-dark);
+    border-top: 1px solid var(--color-border);
+    padding: 40px;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 2;
+}
+/* ==============================
+   ПОПАП
+   ============================== */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-inner {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-danger);
+    padding: 48px;
+    max-width: 460px;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.popup-title {
+    font-size: 20px;
+    color: var(--color-danger);
+    letter-spacing: 0.2em;
+}
+
+.popup-inner input {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.popup-inner input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.popup-inner button {
+    background: var(--color-danger);
+    color: #fff;
+    border: none;
+    font-family: var(--font-main);
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.popup-inner button:hover {
+    background: #fff;
+    color: #000;
+}
+/* ==============================
+   ВНУТРІШНІ СТОРІНКИ — загальне
+   ============================== */
+.page-main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.page-breadcrumb {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+}
+
+.page-breadcrumb a {
+    color: var(--color-accent);
+}
+
+.page-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.page-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.page-sub {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* ==============================
+   КАРТКИ НОВИН
+   ============================== */
+.news-full-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.news-card {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+    transition: border-color 0.2s ease;
+}
+
+.news-card:hover {
+    border-color: var(--color-accent);
+}
+
+.news-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.news-card-date {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.news-card-tag {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    padding: 3px 10px;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.news-card-tag--danger {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+    animation: blink 1s infinite;
+}
+
+.news-card-tag--secret {
+    border-color: #888;
+    color: #888;
+}
+
+.news-card-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.news-card-text {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.news-card-text--redacted {
+    color: #333;
+    background: #333;
+    user-select: none;
+    border-radius: 2px;
+}
+
+.news-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+    padding-top: 16px;
+}
+/* ==============================
+   ФОРМА
+   ============================== */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-progress {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 20px 24px;
+}
+
+.form-progress span {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--color-border);
+    width: 100%;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-accent);
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+.form-block {
+    border: 1px solid var(--color-border);
+    padding: 32px;
+}
+
+.form-block-title {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.required {
+    color: var(--color-danger);
+}
+
+.form-input {
+    width: 100%;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 14px;
+    padding: 12px 16px;
+    transition: border-color 0.2s ease;
+    appearance: none;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.radio-label:hover,
+.checkbox-label:hover {
+    color: var(--color-text);
+}
+
+.form-submit-area {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-submit {
+    background: var(--color-accent);
+    color: #000;
+    border: none;
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 18px 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+    background: var(--color-border);
+    color: var(--color-text-muted);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-note {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* ==============================
+   РЕЗУЛЬТАТ ФОРМИ
+   ============================== */
+.form-result {
+    text-align: center;
+    padding: 80px 40px;
+    border: 1px solid var(--color-accent);
+}
+
+.result-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+.result-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: var(--color-accent);
+}
+
+.result-number {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.result-text {
+    font-size: 16px;
+    line-height: 2;
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+}
+/* ==============================
+   ЛІЧИЛЬНИК
+   ============================== */
+.counter-main {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 48px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.counter-display {
+    margin-bottom: 32px;
+}
+
+.counter-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.counter-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+}
+
+#counter-value {
+    font-size: 96px;
+    color: var(--color-accent);
+    line-height: 1;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.counter-unit {
+    font-size: 24px;
+    color: var(--color-text-muted);
+}
+
+.counter-ml {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-top: 8px;
+}
+
+.counter-controls {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.counter-btn {
+    font-family: var(--font-main);
+    font-size: 16px;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+.counter-btn--plus {
+    background: var(--color-accent);
+    color: #000;
+    font-weight: bold;
+}
+
+.counter-btn--plus:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.counter-btn--minus {
+    background: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+}
+
+.counter-btn--minus:hover {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+}
+
+.counter-status {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    font-style: italic;
+    min-height: 20px;
+    transition: all 0.3s ease;
+}
+
+.counter-norm {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 24px 32px;
+    margin-bottom: 24px;
+}
+
+.norm-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+#norm-percent {
+    color: var(--color-accent);
+}
+
+.norm-note {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.counter-history {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.history-empty {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.history-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+    color: var(--color-text-muted);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.counter-stats {
+    display: flex;
+    gap: 16px;
+}
+
+.cstat-item {
+    flex: 1;
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cstat-num {
+    font-size: 36px;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.cstat-label {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+}
+
+.btn-reset {
+    background: transparent;
+    border: 1px solid var(--color-danger);
+    color: var(--color-danger);
+    font-family: var(--font-main);
+    font-size: 13px;
+    padding: 10px 24px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: all 0.2s ease;
+}
+
+.btn-reset:hover {
+    background: var(--color-danger);
+    color: #fff;
+}
+/* ==============================
+   ЧАТ
+   ============================== */
+.chat-container {
+    border: 1px solid var(--color-border);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--color-bg-dark);
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.chat-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4caf50;
+    animation: blink 2s infinite;
+}
+
+.chat-warning {
+    font-size: 11px;
+    color: var(--color-danger);
+    letter-spacing: 0.1em;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--color-bg);
+}
+
+.chat-message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 70%;
+    animation: fadeIn 0.3s ease;
+}
+
+.chat-message--operator {
+    align-self: flex-start;
+}
+
+.chat-message--user {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.chat-bubble {
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-radius: 2px;
+}
+
+.chat-message--operator .chat-bubble {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.chat-message--user .chat-bubble {
+    background: var(--color-accent);
+    color: #000;
+}
+
+.chat-time {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    padding: 0 4px;
+}
+
+.chat-input-area {
+    display: flex;
+    border-top: 1px solid var(--color-border);
+}
+
+.chat-input {
+    flex: 1;
+    background: var(--color-bg-dark);
+    border: none;
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 14px;
+    padding: 16px 20px;
+    outline: none;
+}
+
+.chat-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.chat-send {
+    background: var(--color-accent);
+    color: #000;
+    border: none;
+    font-family: var(--font-main);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 16px 24px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: background 0.2s ease;
+}
+
+.chat-send:hover {
+    background: #fff;
+}
+
+.chat-hints {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 24px 32px;
+}
+
+.hints-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hint-btn {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-family: var(--font-main);
+    font-size: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.05em;
+}
+
+.hint-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+/* ==============================
+   КАРТА
+   ============================== */
+#map {
+    height: 500px;
+    border: 1px solid var(--color-border);
+    margin-bottom: 24px;
+    z-index: 1;
+}
+
+.map-legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.map-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.puddle-list {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+}
+
+.puddle-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+    animation: fadeIn 0.3s ease;
+}
+
+.puddle-entry:last-child {
+    border-bottom: none;
+}
+
+.puddle-status {
+    font-size: 11px;
+    padding: 3px 10px;
+    border: 1px solid;
+}
+
+.puddle-status--danger {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.puddle-status--watch {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.puddle-status--grey {
+    color: #ffd740;
+    border-color: #ffd740;
+}
+/* ==============================
+   РЕЙТИНГ
+   ============================== */
+.register-block {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.register-form {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.register-form .form-input {
+    flex: 1;
+}
+
+.my-position {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-accent);
+    padding: 24px 32px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.my-position-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+}
+
+.my-position h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.my-position p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.rating-table-container {
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-border);
+    padding: 32px;
+}
+
+.rating-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.rating-count {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.rating-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 180px 140px;
+    padding: 14px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--color-border);
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.rating-row:hover {
+    background: rgba(79, 195, 247, 0.05);
+}
+
+.rating-row--head {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    background: transparent;
+}
+
+.rating-row--head:hover {
+    background: transparent;
+}
+
+.rating-row--me {
+    background: rgba(79, 195, 247, 0.1);
+    border-color: var(--color-accent);
+}
+
+.rating-place {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rating-place--gold   { color: #ffd740; }
+.rating-place--silver { color: #ccc; }
+.rating-place--bronze { color: #cd7f32; }
+
+.rating-badge {
+    font-size: 10px;
+    padding: 2px 8px;
+    border: 1px solid;
+    letter-spacing: 0.1em;
+}
+
+.badge--loyal {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.badge--suspicious {
+    color: #ffd740;
+    border-color: #ffd740;
+}
+
+.badge--danger {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+    animation: blink 1s infinite;
+}
+
+.badge--new {
+    color: #69f0ae;
+    border-color: #69f0ae;
+}
+/* ==============================
+   СЕКРЕТНА СТОРІНКА
+   ============================== */
+.secret-main {
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.secret-phase {
+    width: 100%;
+    max-width: 700px;
+}
+
+.terminal {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #4fc3f7;
+    line-height: 2;
+}
+
+.terminal-line {
+    min-height: 24px;
+}
+
+.terminal-line::after {
+    content: '█';
+    animation: blink 0.7s infinite;
+}
+
+.secret-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.secret-stamp {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: #ff5252;
+    border: 1px solid #ff5252;
+    padding: 6px 16px;
+    display: inline-block;
+    animation: blink 1.5s infinite;
+}
+
+.secret-title {
+    font-size: 42px;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+.secret-block {
+    border-left: 3px solid #4fc3f7;
+    padding-left: 24px;
+}
+
+.secret-block h3 {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #4fc3f7;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.secret-block p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.secret-block--warning {
+    border-color: #ff5252;
+    background: rgba(255, 82, 82, 0.05);
+    padding: 24px;
+}
+
+.secret-block--warning h3 {
+    color: #ff5252;
+}
+
+.secret-block--warning p {
+    color: #ccc;
+}
+
+.secret-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.secret-note {
+    font-size: 11px;
+    color: #444;
+}
