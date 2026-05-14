@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гаряча лінія — Міністерство Води</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <span class="gerb">💧</span>
+        <div class="header-text">
+            <p class="header-small">УКРАЇНА</p>
+            <h1 class="header-title">МІНІСТЕРСТВО ВОДИ</h1>
+            <p class="header-small">Офіційний портал · Засновано у 1423 році</p>
+        </div>
+        <span class="gerb">💧</span>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="../index.html">Головна</a>
+    <a href="zayavlennya.html">Подати заяву</a>
+    <a href="schetchik.html">Лічильник води</a>
+    <a href="novyny.html">Новини</a>
+    <a href="garyacha.html">Гаряча лінія</a>
+    <a href="karta.html">Карта калюж</a>
+    <a href="reyting.html">Рейтинг громадян</a>
+</nav>
+
+<main class="page-main">
+
+    <div class="page-header">
+        <p class="page-breadcrumb">
+            <a href="../index.html">Головна</a> → Гаряча лінія
+        </p>
+        <h2 class="page-title">Гаряча лінія міністерства</h2>
+        <p class="page-sub">
+            Оператор відповідає цілодобово. Всі розмови записуються
+            і передаються до архіву міністерства на 80 років.
+        </p>
+    </div>
+
+    <!-- ЧАТ -->
+    <div class="chat-container">
+
+        <div class="chat-header">
+            <div class="chat-status">
+                <span class="chat-status-dot"></span>
+                <span>Оператор Василь · онлайн</span>
+            </div>
+            <span class="chat-warning">Розмова записується</span>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-message chat-message--operator">
+                <div class="chat-bubble">
+                    Доброго дня. Ви зв'язались з гарячою лінією Міністерства Води України.
+                    Мене звати Василь. Чим можу допомогти?
+                </div>
+                <span class="chat-time">щойно</span>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input
+                    type="text"
+                    class="chat-input"
+                    id="chat-input"
+                    placeholder="Введіть повідомлення..."
+                    maxlength="200"
+            >
+            <button class="chat-send" id="chat-send">Надіслати</button>
+        </div>
+
+    </div>
+
+    <!-- ПІДКАЗКИ -->
+    <div class="chat-hints">
+        <p class="form-block-title">Популярні запитання</p>
+        <div class="hints-list">
+            <button class="hint-btn">Як отримати дозвіл на воду?</button>
+            <button class="hint-btn">Мені відмовили у воді</button>
+            <button class="hint-btn">Хочу поскаржитись на воду</button>
+            <button class="hint-btn">Що таке сіра зона?</button>
+            <button class="hint-btn">Де мій дозвіл?</button>
+            <button class="hint-btn">Чи можна пити чай?</button>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 1423–2026 Міністерство Води України</p>
+    <p>Всі права на воду захищені.</p>
+</footer>
+
+<script src="../script.js"></script>
+<script src="garyacha.js"></script>
+</body>
+</html>

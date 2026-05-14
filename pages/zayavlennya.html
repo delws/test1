@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подати заяву — Міністерство Води</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <span class="gerb">💧</span>
+        <div class="header-text">
+            <p class="header-small">УКРАЇНА</p>
+            <h1 class="header-title">МІНІСТЕРСТВО ВОДИ</h1>
+            <p class="header-small">Офіційний портал · Засновано у 1423 році</p>
+        </div>
+        <span class="gerb">💧</span>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="../index.html">Головна</a>
+    <a href="zayavlennya.html">Подати заяву</a>
+    <a href="schetchik.html">Лічильник води</a>
+    <a href="novyny.html">Новини</a>
+    <a href="garyacha.html">Гаряча лінія</a>
+    <a href="karta.html">Карта калюж</a>
+    <a href="reyting.html">Рейтинг громадян</a>
+</nav>
+
+<main class="page-main">
+
+    <div class="page-header">
+        <p class="page-breadcrumb">
+            <a href="../index.html">Головна</a> → Подати заяву
+        </p>
+        <h2 class="page-title">Заява на право споживання води</h2>
+        <p class="page-sub">
+            Форма №ВД-2031/а. Всі поля обов'язкові.
+            Неправильно заповнена форма анулюється без повідомлення.
+            Термін розгляду — 80-90 років.
+        </p>
+    </div>
+
+    <!-- ФОРМА -->
+    <div class="form-container" id="form-container">
+
+        <div class="form-progress">
+            <span id="progress-text">Заповнено: 0 з 12 полів</span>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="form-fields">
+
+            <!-- БЛОК 1 — ОСОБИСТІ ДАНІ -->
+            <div class="form-block">
+                <h3 class="form-block-title">Розділ I. Особисті дані</h3>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Прізвище, ім'я, по батькові <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" placeholder="Як у паспорті">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Дата народження <span class="required">*</span>
+                    </label>
+                    <input type="date" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Ідентифікаційний код водоспоживача <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" placeholder="Видається при народженні. Якщо не знаєте — зверніться до мами">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Група крові <span class="required">*</span>
+                    </label>
+                    <select class="form-input">
+                        <option value="">Оберіть групу</option>
+                        <option>I (О) — базова водна сумісність</option>
+                        <option>II (А) — підвищена тяга до мінеральної</option>
+                        <option>III (В) — схильність до газованої</option>
+                        <option>IV (АВ) — на розгляді комісії</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- БЛОК 2 — ВОДНІ ДАНІ -->
+            <div class="form-block">
+                <h3 class="form-block-title">Розділ II. Водний профіль</h3>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Скільки склянок води ви споживаєте на добу <span class="required">*</span>
+                    </label>
+                    <input type="number" class="form-input" placeholder="Тільки чесно. Ми перевіримо." min="0" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Улюблений звук води <span class="required">*</span>
+                    </label>
+                    <select class="form-input">
+                        <option value="">Оберіть звук</option>
+                        <option>Дзюрчання струмка</option>
+                        <option>Крапання з крану</option>
+                        <option>Шум дощу</option>
+                        <option>Звук відкритої пляшки</option>
+                        <option>Тиша (підозріло)</option>
+                        <option>Інший (додати пояснювальну записку)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Ваше ставлення до води <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="stavlennya" value="1">
+                            Поважаю і ціную
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="stavlennya" value="2">
+                            Споживаю без зайвих емоцій
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="stavlennya" value="3">
+                            Боюсь але п'ю
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="stavlennya" value="4">
+                            Вважаю себе водою (направити до психіатра)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Чи снилась вам вода за останні 30 днів <span class="required">*</span>
+                    </label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="son" value="ni"> Ні
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="son" value="tak"> Так (заповнити форму №СН-119)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="son" value="neznam"> Не пам'ятаю снів (підозріло)
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- БЛОК 3 — ТЕХНІЧНІ ДАНІ -->
+            <div class="form-block">
+                <h3 class="form-block-title">Розділ III. Технічні відомості</h3>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Мета споживання води <span class="required">*</span>
+                    </label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Вгамування спраги
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Приготування їжі
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Гігієнічні процедури
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Поливання рослин (окремий дозвіл)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Інше (пояснити у 3-х примірниках)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Опишіть свою спрагу за останній тиждень <span class="required">*</span>
+                    </label>
+                    <textarea class="form-input form-textarea"
+                              placeholder="Мінімум 200 символів. Будьте конкретні. 'Хотів пити' — недостатньо інформативно.">
+            </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Чи є у вас родичі які також споживають воду <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" placeholder="Вкажіть ПІБ та ступінь спорідненості">
+                </div>
+
+            </div>
+
+            <!-- КНОПКА -->
+            <div class="form-submit-area">
+                <div class="form-agreement">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agreement">
+                        Я підтверджую що всі вказані дані є правдивими і погоджуюсь
+                        на передачу моїх водних даних до федеральної бази, міжнародного
+                        реєстру водоспоживачів, а також на публікацію моєї спраги у
+                        щорічному звіті міністерства.
+                    </label>
+                </div>
+                <button class="btn-submit" id="submit-btn">
+                    Подати заяву →
+                </button>
+                <p class="form-note">
+                    * Після подачі заяви ви отримаєте підтвердження на вказану
+                    адресу протягом 3-5 робочих десятиліть.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- РЕЗУЛЬТАТ після відправки -->
+    <div class="form-result" id="form-result" style="display:none">
+        <p class="result-icon">📋</p>
+        <h3 class="result-title">Заяву прийнято</h3>
+        <p class="result-number">Номер вашої заяви: <strong id="result-number"></strong></p>
+        <p class="result-text">
+            Дякуємо за звернення до Міністерства Води України.<br>
+            Орієнтовний термін розгляду — <strong>80-90 років.</strong><br>
+            До отримання дозволу рекомендуємо утриматись від споживання води.
+        </p>
+        <a href="../index.html" class="btn-main">← Повернутись на головну</a>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 1423–2026 Міністерство Води України</p>
+    <p>Всі права на воду захищені.</p>
+</footer>
+
+<script src="../script.js"></script>
+<script src="zayavlennya.js"></script>
+</body>
+</html>

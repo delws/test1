@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лічильник води — Міністерство Води</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <span class="gerb">💧</span>
+        <div class="header-text">
+            <p class="header-small">УКРАЇНА</p>
+            <h1 class="header-title">МІНІСТЕРСТВО ВОДИ</h1>
+            <p class="header-small">Офіційний портал · Засновано у 1423 році</p>
+        </div>
+        <span class="gerb">💧</span>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="../index.html">Головна</a>
+    <a href="zayavlennya.html">Подати заяву</a>
+    <a href="schetchik.html">Лічильник води</a>
+    <a href="novyny.html">Новини</a>
+    <a href="garyacha.html">Гаряча лінія</a>
+    <a href="karta.html">Карта калюж</a>
+    <a href="reyting.html">Рейтинг громадян</a>
+</nav>
+
+<main class="page-main">
+
+    <div class="page-header">
+        <p class="page-breadcrumb">
+            <a href="../index.html">Головна</a> → Лічильник води
+        </p>
+        <h2 class="page-title">Особистий лічильник водоспоживання</h2>
+        <p class="page-sub">
+            Всі дані автоматично передаються до бази міністерства.
+            Заниження показників карається штрафом серії ЛЧ-2031.
+        </p>
+    </div>
+
+    <!-- ГОЛОВНИЙ ЛІЧИЛЬНИК -->
+    <div class="counter-main">
+        <div class="counter-display">
+            <p class="counter-label">ВИПИТО СЬОГОДНІ</p>
+            <div class="counter-number">
+                <span id="counter-value">0</span>
+                <span class="counter-unit">склянок</span>
+            </div>
+            <div class="counter-ml">
+                = <span id="counter-ml">0</span> мл
+            </div>
+        </div>
+
+        <div class="counter-controls">
+            <button class="counter-btn counter-btn--minus" id="btn-minus">−</button>
+            <button class="counter-btn counter-btn--plus" id="btn-plus">+ Випив склянку</button>
+        </div>
+
+        <div class="counter-status" id="counter-status">
+            Починайте день з склянки води, громадянине.
+        </div>
+    </div>
+
+    <!-- НОРМА -->
+    <div class="counter-norm">
+        <div class="norm-header">
+            <span>Денна норма за наказом №НВ-8/2031</span>
+            <span id="norm-percent">0%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="norm-fill"></div>
+        </div>
+        <p class="norm-note">
+            Офіційна норма: <strong>8 склянок</strong> на добу.
+            Більше 8 — підозріло. Менше 8 — недбалість.
+            Рівно 8 — занадто точно, також підозріло.
+        </p>
+    </div>
+
+    <!-- ІСТОРІЯ -->
+    <div class="counter-history">
+        <h3 class="form-block-title">Журнал споживання</h3>
+        <div id="history-list">
+            <p class="history-empty">Журнал порожній. Почніть пити воду, громадянине.</p>
+        </div>
+    </div>
+
+    <!-- СТАТИСТИКА -->
+    <div class="counter-stats">
+        <div class="cstat-item">
+            <span class="cstat-num" id="stat-today">0</span>
+            <span class="cstat-label">склянок сьогодні</span>
+        </div>
+        <div class="cstat-item">
+            <span class="cstat-num" id="stat-total">0</span>
+            <span class="cstat-label">всього за весь час</span>
+        </div>
+        <div class="cstat-item">
+            <span class="cstat-num" id="stat-days">0</span>
+            <span class="cstat-label">днів під наглядом</span>
+        </div>
+    </div>
+
+    <!-- КНОПКА СКИДАННЯ -->
+    <div style="text-align: center; margin-top: 40px;">
+        <button class="btn-reset" id="btn-reset">
+            Скинути показники дня
+        </button>
+        <p class="form-note" style="margin-top: 12px;">
+            * Скидання показників без поважної причини — адмінправопорушення
+        </p>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 1423–2026 Міністерство Води України</p>
+    <p>Всі права на воду захищені.</p>
+</footer>
+
+<script src="../script.js"></script>
+<script src="schetchik.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта калюж — Міністерство Води</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- Підключаємо Leaflet — безкоштовна бібліотека карт -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <span class="gerb">💧</span>
+        <div class="header-text">
+            <p class="header-small">УКРАЇНА</p>
+            <h1 class="header-title">МІНІСТЕРСТВО ВОДИ</h1>
+            <p class="header-small">Офіційний портал · Засновано у 1423 році</p>
+        </div>
+        <span class="gerb">💧</span>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="../index.html">Головна</a>
+    <a href="zayavlennya.html">Подати заяву</a>
+    <a href="schetchik.html">Лічильник води</a>
+    <a href="novyny.html">Новини</a>
+    <a href="garyacha.html">Гаряча лінія</a>
+    <a href="karta.html">Карта калюж</a>
+    <a href="reyting.html">Рейтинг громадян</a>
+</nav>
+
+<main class="page-main">
+
+    <div class="page-header">
+        <p class="page-breadcrumb">
+            <a href="../index.html">Головна</a> → Карта калюж
+        </p>
+        <h2 class="page-title">Реєстр підозрілих калюж</h2>
+        <p class="page-sub">
+            Інтерактивна карта несанкціонованих водних об'єктів.
+            Помітили підозрілу калюжу — натисніть на карту щоб повідомити.
+        </p>
+    </div>
+
+    <!-- ЛЕГЕНДА -->
+    <div class="map-legend">
+        <div class="legend-item">
+            <span class="legend-dot" style="background:#ff5252"></span>
+            Небезпечна калюжа
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot" style="background:#4fc3f7"></span>
+            Під наглядом
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot" style="background:#ffd740"></span>
+            Сіра зона
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot" style="background:#69f0ae"></span>
+            Дозволена (1 шт.)
+        </div>
+    </div>
+
+    <!-- КАРТА -->
+    <div id="map"></div>
+
+    <!-- СТАТИСТИКА КАРТИ -->
+    <div class="map-stats">
+        <div class="cstat-item">
+            <span class="cstat-num" id="map-total">0</span>
+            <span class="cstat-label">калюж на карті</span>
+        </div>
+        <div class="cstat-item">
+            <span class="cstat-num" id="map-dangerous">0</span>
+            <span class="cstat-label">небезпечних</span>
+        </div>
+        <div class="cstat-item">
+            <span class="cstat-num">1</span>
+            <span class="cstat-label">дозволених</span>
+        </div>
+    </div>
+
+    <!-- СПИСОК КАЛЮЖ -->
+    <div class="puddle-list">
+        <h3 class="form-block-title">Останні виявлені об'єкти</h3>
+        <div id="puddle-entries"></div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 1423–2026 Міністерство Води України</p>
+    <p>Всі права на воду захищені.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../script.js"></script>
+<script src="karta.js"></script>
+</body>
+</html>

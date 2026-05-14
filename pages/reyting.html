@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг громадян — Міністерство Води</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <span class="gerb">💧</span>
+        <div class="header-text">
+            <p class="header-small">УКРАЇНА</p>
+            <h1 class="header-title">МІНІСТЕРСТВО ВОДИ</h1>
+            <p class="header-small">Офіційний портал · Засновано у 1423 році</p>
+        </div>
+        <span class="gerb">💧</span>
+    </div>
+</header>
+
+<nav class="nav">
+    <a href="../index.html">Головна</a>
+    <a href="zayavlennya.html">Подати заяву</a>
+    <a href="schetchik.html">Лічильник води</a>
+    <a href="novyny.html">Новини</a>
+    <a href="garyacha.html">Гаряча лінія</a>
+    <a href="karta.html">Карта калюж</a>
+    <a href="reyting.html">Рейтинг громадян</a>
+</nav>
+
+<main class="page-main">
+
+    <div class="page-header">
+        <p class="page-breadcrumb">
+            <a href="../index.html">Головна</a> → Рейтинг громадян
+        </p>
+        <h2 class="page-title">Рейтинг законослухняних водоспоживачів</h2>
+        <p class="page-sub">
+            Громадяни які добровільно звітують про споживання води.
+            Реєстрація підтверджує вашу лояльність до міністерства.
+        </p>
+    </div>
+
+    <!-- РЕЄСТРАЦІЯ -->
+    <div class="register-block" id="register-block">
+        <h3 class="form-block-title">Зареєструватись у реєстрі</h3>
+        <div class="register-form">
+            <input
+                    type="text"
+                    class="form-input"
+                    id="reg-name"
+                    placeholder="Ваше ім'я або псевдонім"
+                    maxlength="30"
+            >
+            <button class="btn-submit" id="reg-btn">
+                Внести себе до реєстру →
+            </button>
+        </div>
+        <p class="form-note">
+            * Реєстрація є добровільною але її відсутність фіксується.
+        </p>
+    </div>
+
+    <!-- МОЯ ПОЗИЦІЯ -->
+    <div class="my-position" id="my-position" style="display:none">
+        <p class="my-position-label">ВАШ СТАТУС</p>
+        <h3 id="my-name-display"></h3>
+        <p id="my-rank-display"></p>
+        <p id="my-score-display"></p>
+    </div>
+
+    <!-- ТАБЛИЦЯ РЕЙТИНГУ -->
+    <div class="rating-table-container">
+        <div class="rating-header">
+            <h3 class="form-block-title">Загальний реєстр</h3>
+            <span class="rating-count">
+          Зареєстровано: <span id="total-citizens">0</span> громадян
+        </span>
+        </div>
+
+        <div class="rating-table">
+            <div class="rating-row rating-row--head">
+                <span>Місце</span>
+                <span>Громадянин</span>
+                <span>Балів лояльності</span>
+                <span>Статус</span>
+            </div>
+            <div id="rating-list"></div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>© 1423–2026 Міністерство Води України</p>
+    <p>Всі права на воду захищені.</p>
+</footer>
+
+<script src="../script.js"></script>
+<script src="reyting.js"></script>
+</body>
+</html>
